@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../icon.ico" type="image/x-icon" />
+    <title>Review</title>
+    <link rel="stylesheet" href="review.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="#" class="navbar-brand">LearnWit</a>
+    </nav>
+    <div class="reviewpage">
+      <h1>Please review our quiz website!!</h1>
+      <div class="rating-container">
+        <input type="radio" name="review" class="review" id="a" />
+        <label for="a" id="review1">1⭐</label>
+        <input type="radio" name="review" class="review" id="b" />
+        <label for="b" id="review2">2⭐</label>
+        <input type="radio" name="review" class="review" id="c" />
+        <label for="c" id="review3">3⭐</label>
+        <input type="radio" name="review" class="review" id="d" />
+        <label for="d" id="review4">4⭐</label>
+        <input type="radio" name="review" class="review" id="e" />
+        <label for="e" id="review5">5⭐</label>
+      </div>
+      <div class="button" id="toastPopup">
+        <button type="submit" id="submit" class="btn btn-primary">
+          Submit
+        </button>
+      </div>
+
+      
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="review.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#submit").on("click", function (e) {
+          e.preventDefault(); // Prevent the default form submission behavior
+
+          // Show the toast popup
+
+          // showToast('Submitted successfully!');
+          showToast("Thank you for Rating!");
+          // Redirect to index.html after a delay
+          setTimeout(function () {
+            window.location.href = "../index.html";
+          }, 3000);
+        });
+
+        // Function to display the toast popup
+        function showToast(message) {
+          $("#toastPopup").text(message).fadeIn().delay(2000).fadeOut(); // Display for 2 seconds
+        }
+      });
+    </script>
+  </body>
+</html>

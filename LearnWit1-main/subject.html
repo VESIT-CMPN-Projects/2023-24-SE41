@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SQUIZ</title>
+    <link rel="icon" href="icon.ico" type="image/x-icon" />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #1e272e; /* Dark blue */
+        color: #fff; /* White text */
+      }
+
+      h1 {
+        margin: 20px;
+      }
+
+      .navbar {
+        background-color: #2196f3;
+        overflow: hidden;
+      }
+
+      .navbar a {
+        float: right;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
+      .navbar a:hover {
+        background-color: #0b7dda;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: calc(100vw - 40px);
+        justify-content: space-around;
+        /* overflow-x: auto; Enable horizontal scrolling */
+        padding: 30px;
+        margin-bottom: 20px; /* Add space at the bottom for the details section */
+        /* -webkit-overflow-scrolling: touch; Smooth scrolling for iOS Safari */
+        width: calc(100vw - 40px); /* Adjust width to fit three cards per page*/
+      }
+
+      .card {
+        width: calc(
+          33.33% - 20px
+        ); /* Adjust width to fit three cards per page */
+        box-sizing: border-box;
+        flex-direction: column;
+        align-items: column;
+        justify-content: center;
+        margin-right: 20px;
+        overflow: hidden;
+        background-color: #333; /* Dark gray */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow */
+        border-radius: 12px;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transition */
+      }
+
+      .card:last-child {
+        margin-right: 0;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgb(0, 0, 0, 0.3), 0 0 0 5px #1cdef0; /* White box shadow */
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 12px 12px 0 0;
+      }
+
+      .content {
+        padding: 15px;
+      }
+
+      h2 {
+        margin-top: 0;
+        color: #fff;
+      }
+
+      .sticker {
+        display: inline-block;
+        width: 100%;
+        height: 50px;
+        background-color: #ffd700; /* Yellow */
+        border-radius: 0 0 12px 12px;
+        text-align: center;
+        line-height: 50px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        text-decoration: none; /* Remove underline */
+        transition: background-color 0.3s ease-in-out; /* Add transition */
+      }
+
+      .sticker:hover {
+        background-color: #fada5e; /* Add hover effect */
+      }
+
+      .details {
+        padding: 20px;
+        background-color: #0e0991; /* Light blue */
+        border-radius: 12px;
+        color: #000; /* Dark text */
+        margin-bottom: 20px;
+      }
+
+      #rules {
+        color: whitesmoke;
+        font-size: 18px; /* Increase font size */
+      }
+
+      #rules p {
+        margin-bottom: 10px;
+      }
+
+      /* Color classes for cards */
+      .os {
+        background-color: #4caf50; /* Green */
+      }
+
+      .mp {
+        background-color: #2196f3; /* Blue */
+      }
+
+      .python {
+        background-color: #ff5722; /* Orange */
+      }
+
+      .aoa {
+        background-color: #9c27b0; /* Purple */
+      }
+
+      .dbms {
+        background-color: #d30e67; /* Red */
+      }
+      @media (max-width: 768px) {
+        .card {
+          /* flex-wrap: wrap; */
+
+          width: calc(50% - 20px); /* Adjust width to fit two cards per row */
+        }
+      }
+
+      @media (max-width: 480px) {
+        .card {
+          width: 100%; /* Adjust width to fit one card per row */
+          margin-right: 0; /* Remove right margin for full-width cards */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="contact.html">Contact Us</a>
+      <a href="index.html">LogOut</a>
+    </div>
+
+    <h1><img src="LOGO.jpg" alt="logo" width="50px" height="40px" /></h1>
+
+    <div class="container">
+      <div class="card os">
+        <img src="./assets/OS.jpg" alt="Operating System" />
+        <div class="content">
+          <h2>OPERATING SYSTEM</h2>
+          <p>Understanding the backbone of computer systems.</p>
+        </div>
+        <a class="sticker" id="OPERATING_SYSTEM" href="./OS/OS_level.html"
+          >Attempt Quiz</a
+        >
+      </div>
+
+      <div class="card mp">
+        <img src="./assets/microprocessor.jpeg"" alt="Microprocessor">
+        <div class="content">
+          <h2>MICROPROCESSOR</h2>
+          <p>Mastering principles of microprocessors.</p>
+        </div>
+        <a class="sticker" id="MICROPROCESSOR" href="./MP/MP_level.html"
+          >Attempt Quiz</a
+        >
+      </div>
+
+      <div class="card python">
+        <img src="./assets/python.jpeg" alt="Python" />
+        <div class="content">
+          <h2>PYTHON</h2>
+          <p>Harnessing the power of versatile programming.</p>
+        </div>
+        <a class="sticker" id="PYTHON" href="./PYTHON/py_level.html"
+          >Attempt Quiz</a
+        >
+      </div>
+
+      <div class="card aoa">
+        <img src="./assets/AOA.png" alt="Algorithm Analysis" />
+        <div class="content">
+          <h2>AOA</h2>
+          <p>Exploring the art of algorithm analysis.</p>
+        </div>
+        <a class="sticker" id="AOA" href="./AOA/AOA_level.html">Attempt Quiz</a>
+      </div>
+
+      <div class="card dbms">
+        <img src="./assets/DBMS.jpeg" alt="Database Management" />
+        <div class="content">
+          <h2>DBMS</h2>
+          <p>Navigating the world of database management.</p>
+        </div>
+        <a class="sticker" id="DBMS" href="./DBMS/DBMS_level.html"
+          >Attempt Quiz</a
+        >
+      </div>
+    </div>
+
+    <div class="details">
+      <h2>Rules to Attempt the Quiz</h2>
+      <div id="rules">
+        <p>1. There are 10 questions in each quiz.</p>
+        <p>2. Only 1 question will be displayed at a time.</p>
+        <p>3. Attempt the question to move to the next question.</p>
+        <p>4. One point per each correct answer.</p>
+        <p>5. Score maximum by giving correct answers.</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .typed-cursor {
+        color: #38BDF8; /* Light blue */
+    }
+</style>
+
+</head>
+<body>
+  
+  <div id="typed-text" class="text-white bg-blue-900 p-4"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          var typed = new Typed('#typed-text', {
+              strings: ["Dynamic text in light blue", "Another dynamic text"],
+              typeSpeed: 50,
+              backSpeed: 30,
+              loop: true,
+          });
+      });
+  </script>
+  
+</body>
+</html>

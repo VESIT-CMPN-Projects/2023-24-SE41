@@ -1,0 +1,48 @@
+/* Styles for the result container */
+.result {
+  text-align: center;
+  background-color: #f2f2f2;
+  border: 2px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+/* Styles for the score text */
+.result h3 {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Styles for the reload button */
+.reload-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.reload-button:hover {
+  background-color: #0056b3;
+}
+
+/* Styles for the HOME and REVIEW buttons */
+#home-btn,
+#review-btn {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#home-btn:hover,
+#review-btn:hover {
+  background-color: #555;
+}

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <title>Contact-us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #12182f;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            background-color: #1e2a4a;
+        }
+
+        .navbar-brand {
+            color: #fff !important;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: #fff !important;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #09ebd5 !important;
+        }
+
+        .contact {
+            width: 100%;
+            max-width: 600px;
+            margin: 10px ;
+            margin-left: 0px;
+            
+            background: #1e2a4a;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.5s ease;
+        }
+
+        .contact:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .address,
+        .phone,
+        .email {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .address i,
+        .phone i,
+        .email i {
+            font-size: 30px;
+            color: #3e2093;
+            margin-bottom: 10px;
+        }
+
+        .details {
+            font-size: 16px;
+            color: #afafb6;
+        }
+
+        .details .topic {
+            font-size: 18px;
+            font-weight: 500;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.social-icons a:before {
+    content: attr(aria-label);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    font-size: 14px;
+    background-color: #000000;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.social-icons a:hover:before {
+    opacity: 1;
+}
+
+.social-icons a:hover {
+    color: #09ebd5;
+}
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .logo {
+            display: block;
+            margin: auto;
+            width: 50px;
+            height: 40px;
+            align-items: center;
+        }
+        .navbar-brand {
+            color: #5a9ecb !important;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .contact {
+    background-image: linear-gradient(to bottom right, #394867, #293047);
+    color: #fff;
+    padding: 30px ;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    /* background-color: #fff; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.form-wrapper {
+    
+    width: 100%;
+    max-width: 400px;
+    padding: 0 10px; /* Adjust spacing between form and image */
+}
+
+.get-in-touch {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #09ebd5;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.underline {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 50px;
+    background-color: #09ebd5;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+.get-in-touch:hover .underline {
+    transform: scaleX(0.8);
+}
+.get-in-touch:hover {
+    color: #fff;
+}
+.content {
+    margin-top: 10px;
+    background-image: linear-gradient(to bottom right, #394867, #293047);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: #09ebd5;
+}
+
+.submit-btn {
+   display: flex;
+   align-items: center;
+   color: #fff;
+   font-size: 16px;
+   border: none;
+   padding: 10px 30px;
+   gap: 5px;
+   border-radius: 50px;
+   cursor: pointer;
+   position: relative;
+   background: linear-gradient(to right, #169fde, #0b31b9);
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(to right, #222222, #111111);
+}
+
+.submit-icon {
+    width: 20px; /* Adjust the size of the icon */
+    margin-left: 10px;
+}
+
+.right-image {
+    display: none;
+    margin-top: 80px; 
+
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.contact-page {
+    display: flex;
+    max-width: 1000px;
+    justify-content: space-around;
+    /* align-items:flex-start; */
+    margin: 50px auto;
+    background: #151f3a;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 5px 10px rgba(237, 228, 228, 0.2);
+    transition: all 0.5s ease;
+}
+
+
+@media (min-width: 768px) {
+    .form-container {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .form-wrapper {
+        width: calc(50% - 20px); /* Adjust the width and padding */
+        padding: 0;
+    }
+
+    .right-image {
+        display: block;
+        width: calc(50% - 20px); /* Adjust the width and padding */
+        padding-left: 20px; /* Adjust the spacing */
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="LOGO.jpg" alt="LOGO" class="logo">
+                <h1>Learnwit</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="contact-page">
+        <div class="contact" id="Contact-us">
+            <div class="form-container">
+                <div class="form-wrapper">
+                    <h2 class="get-in-touch">Get in touch<span class="underline"></span></h2>
+                    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" onsubmit="SendEmail();reset();return false;">
+        
+                        <input type="hidden" name="access_key" value="7cc8f5ff-efb8-43f1-bcab-95dcc716499d">
+        
+                        Name:<input type="text" name="name" required placeholder="Enter your Name">
+                        Email:<input type="email" name="email" required placeholder="Enter your Email">
+                        Message:<textarea name="message" required placeholder="Your Message"></textarea>
+                        <button type="submit" class="submit-btn">
+                            Submit Form
+                            <img src="../LearnWit1-main/assets/arrow_icon.png" alt="Submit Icon" class="submit-icon">
+                        </button>
+        
+                    </form>
+                </div>
+                <div class="right-image">
+                    <img src="../LearnWit1-main/assets/right_img.png" alt="Right Image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+    
+        
+        <div class="content">
+            <div class="left-side">
+                <div class="address details">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="topic">Address</div>
+                    <div class="details">VESIT</div>
+                    <div class="details">Chembur, Mumbai</div>
+                </div>
+                <div class="phone details">
+                    <i class="fas fa-phone-alt"></i>
+                    <div class="topic">Phone</div>
+                    <div class="details">+91 8964579434</div>
+                    <div class="details">+91 5887455581</div>
+                    <div class="details">+91 8769654789</div>
+                    <div class="details">+91 91876220417</div>
+                </div>
+                <div class="email details">
+                    <i class="fas fa-envelope"></i>
+                    <div class="topic">Email</div>
+                    <div class="details">harsh.patil@gmail.com</div>
+                    <div class="details">hemant.satam@gmail.com</div>
+                    <div class="details">suryanarayan.panigrahy@gmail.com</div>
+                    <div class="details">gaurav.gupta@gmail.com</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer text-center">
+        <div class="container">
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7171759640085573632?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7171759640085573632%29
+            "><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/Surya17847/LearnWit1"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.instagram.com/learn_wit_/"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=61556786798026&is_tour_dismissed=true"><i class="fab fa-facebook"></i> Facebook</a>
+          </div>
+          <p>&copy; 2024 LearnWit. All Rights Reserved.</p>
+    <footer>
+        <!-- <div class="social-icons">
+          <a href="https://www.linkedin.com/in/learnwit-website-8168a22b8/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/Surya17847/LearnWit1"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://www.instagram.com/?next=%2F&hl=en"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="https://www.facebook.com/profile.php?id=61556786798026&is_tour_dismissed=true"><i class="fab fa-facebook"></i> Facebook</a>
+        </div> -->
+      <!-- </footer> -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script>
+      function clearFormInputs(form) {
+    // Reset form after a delay of 5 seconds
+    setTimeout(function() {
+        form.reset();
+        form.parentElement.style.display = ''; // Hide the form container
+    }, 5000);
+}
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+crossorigin="anonymous"></script>
+
+</body>
+
+</html>

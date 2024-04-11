@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+/* Reset some default styles */
+/* html, body {
+    margin: 0;
+    padding: 0;
+} */
+
+/* Set a background color for the whole page */
+body {
+    /* background-color: #f0f0f0; */
+    font-family: Arial, sans-serif;
+    background-image: url(sideimg1.jpg);
+    background-size: cover;
+
+}
+
+/* Style the quiz container */
+.quize-section {
+    text-align: left;
+    /* margin-top: 50px; */
+    height: 90%;
+    margin-bottom: 50px;
+}
+
+/* Style the quiz content */
+#quiz {
+    background-color: #6acae5;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    color: white;
+}
+
+/* Style the question */
+.question {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Style the options */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.answer {
+    margin-right: 10px;
+}
+
+/* Style the submit button */
+.button {
+    text-align: center;
+    margin-top: 60px;
+}
+
+#submit {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Change button color on hover */
+#submit:hover {
+    background-color: #555;
+}

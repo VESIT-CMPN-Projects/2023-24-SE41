@@ -1,0 +1,334 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Header styles */
+header {
+    position: absolute; /* Position the header absolutely */
+    top: 0; /* Align to the top of the page */
+    left: 0; /* Align to the left of the page */
+    padding: 10px; /* Add some padding to the header */
+}
+
+/* Logo styles */
+header img {
+    width: 50px;
+    height: 40px;
+}
+
+/* Quiz section styles */
+.quize-section {
+    background-color: rgba(0, 0, 0, 0.8); /* Darken the background */
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+    margin: auto; /* Center the content horizontally and vertically */
+    position: absolute;
+    /* top: 50%;*/
+    left: 100px; 
+    /* transform: translate(-50%, -50%); */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Quiz content styles */
+#quiz {
+    color: white;
+}
+
+/* Question styles */
+.question {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Options styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.option {
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.answer {
+    margin-right: 10px;
+}
+
+/* Button styles */
+.button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#submit,
+#next,
+#prev {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Change button color on hover */
+#submit:hover,
+#next:hover,
+#prev:hover {
+    background-color: #555;
+}
+
+/* Timer styles */
+#timer {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Quiz section styles */
+.quize-section {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+    width: 600px; /* Fixed width for the quiz section */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    position: relative; /* Required for absolute positioning of buttons */
+    border: 2px solid #ccc; /* Add border to quiz section */
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+
+/* Options styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.answer {
+    margin-right: 10px; /* Add margin between radio button and option */
+    width: 20px; /* Adjust width of the radio button */
+    height: 20px; /* Adjust height of the radio button */
+}
+
+/* Previous and Next button styles */
+#prev,
+#next {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Change button color on hover */
+#prev:hover,
+#next:hover {
+    background-color: #555;
+}
+
+.answer {
+    margin-right: 10px; /* Add margin between radio button and option */
+}
+/* Previous button styles */
+#prev {
+    position: absolute;
+    bottom: 10px; /* Position below quiz div */
+    left: 50px; /* Adjust as needed */
+}
+
+/* Next button styles */
+#next {
+    position: absolute;
+    bottom: 10px; /* Position below quiz div */
+    right: 50px; /* Adjust as needed */
+}
+/* submit button styles */
+#submit {
+    position: absolute;
+    bottom: 10px; /* Position below quiz div */
+    right: 50px; /* Adjust as needed */
+}
+label {
+        display: flex; /* Use flexbox for alignment */
+        align-items: center; /* Align items vertically */
+        justify-content: flex-start; /* Align items to the start */
+        border: 1px solid #ccc; /* Add borders around options */
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.quize-section {
+    animation: fadeIn 0.5s ease;
+}
+body {
+    background-image: url('./assets/background.jpg'); /* Replace 'background.jpg' with the path to your image */
+    background-size: cover; /* This will make sure the background image covers the entire viewport */
+    background-repeat: no-repeat; /* This prevents the background image from repeating */
+}
+/* Common styles */
+/* Add common styles that apply to both mobile and web here */
+
+/* Styles for mobile devices */
+@media only screen and (max-width: 600px) {
+    /* Adjust styles for smaller screens */
+    /* For example, reduce font sizes, adjust padding, etc. */
+    header img {
+        width: 30px; /* Adjust logo size for mobile */
+        height: 24px;
+    }
+
+    .quiz-section {
+        width: 100%; /* Adjust width of quiz section */
+        padding: 10px; /* Adjust padding */
+        margin: 10px auto; /* Center quiz section */
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .question {
+        font-size: 20px; /* Reduce font size for question */
+        margin-bottom: 10px; /* Adjust margin */
+    }
+
+    ul {
+        margin-bottom: 20px; /* Adjust margin */
+    }
+
+    .answer {
+        margin-right: 5px; /* Adjust margin */
+    }
+
+    .buttons {
+        margin-top: 20px; /* Adjust margin */
+    }
+
+    #pieChartContainer {
+            margin-top: 20px; 
+            align-content: center;
+            justify-items: center;
+            flex-direction: column;
+    }
+}
+
+/* Styles for web devices */
+@media only screen and (min-width: 601px) {
+    /* Adjust styles for larger screens */
+    header img {
+        width: 50px; /* Default logo size */
+        height: 40px;
+    }
+
+    .quiz-section {
+        width: 600px; /* Fixed width for quiz section */
+        padding: 20px; /* Default padding */
+        margin: 20px auto; /* Center quiz section */
+    }
+
+    .question {
+        font-size: 24px; /* Default font size for question */
+        margin-bottom: 20px; /* Default margin */
+    }
+
+    ul {
+        margin-bottom: 30px; /* Default margin */
+    }
+
+    .answer {
+        margin-right: 10px; /* Default margin */
+    }
+
+    .buttons {
+        margin-top: 40px; /* Default margin */
+    }
+
+    #pieChartContainer {
+        margin-top: 40px; 
+        align-content: center;
+        justify-items: center;
+        flex-direction: column;
+    }
+}
+  .exit {
+    position: absolute;
+    top: 20px;
+    right: 150px;
+    border-radius: 0.5rem;
+    border: #000;
+    color: #e2edee;
+    background-color: #9d0787;
+    display: block;
+    padding: 1rem 2rem; /* Increase the size of the button */
+    font-size: 1.2rem; /* Increase the font size of the button */
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the exit button */
+.exit:hover {
+    background-color: #6a045e;
+}
+  

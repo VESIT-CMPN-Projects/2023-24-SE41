@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../level1.css">
+    <title>Levels</title>
+    <link rel="icon" href="../icon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <h1><img src="../LOGO.jpg" alt=" logo" width="50px" height="40px"></h1>
+    </header>
+    <button class="exit">Exit</button>
+    <div class="quize-section">
+        <span id="timer"></span>
+        <div id="quiz">
+            <button type="button" id="prev">Previous</button>
+            <h1 class="question" id="question">question</h1>
+            <ul>
+                <li>
+                    <input type="radio" class="answer" name="option" id="a">
+                    <label for="a" id="option1">option1</label>
+                </li>
+                <li>
+                    <input type="radio" class="answer" name="option" id="b">
+                    <label for="b" id="option2">option2</label>
+                </li>
+                <li>
+                    <input type="radio" class="answer" name="option" id="c">
+                    <label for="c" id="option3">option3</label>
+                </li>
+                <li>
+                    <input type="radio" class="answer" name="option" id="d">
+                    <label for="d" id="option4">option4</label>
+                </li>
+            </ul>
+
+            <button type="button" id="next">Next</button>
+            <button type="submit" id="submit">Submit</button>
+        </div>
+    </div>
+    <div id="pieChartContainer">
+      <canvas id="pieChart" width="250" height="250"></canvas>
+  </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="AOA_level1.js"></script>
+</body>
+</html>

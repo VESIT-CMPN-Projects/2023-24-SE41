@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <link rel="icon" href="../icon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../review.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="navbar-brand">LearnWit</a>
+        <button id="logoutBtn" class="btn btn-outline-light"><a href="../index.html">Logout</a></button>
+    </nav>
+    <div class="reviewpage">
+        <button id="analyze-btn" class="btn btn-primary">Result Analysis</button>
+        <div id="review-container" class="review-container">
+            <div id="correct-questions" class="question-section">
+                <h3>Correct Answers</h3>
+                <!-- Correct questions will be displayed here -->
+            </div>
+            <div id="wrong-questions" class="question-section">
+                <h3>Incorrect Answers</h3>
+                <!-- Incorrect questions will be displayed here -->
+            </div>
+        </div>
+        <div class="graph-container">
+            <canvas id="graph"></canvas>
+        </div>
+        <div id="home-btn-container">
+            <button id="home-btn" class="btn btn-outline-light" >Go to Home</button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="DBMS_l2_review.js"></script>
+    <script src="DBMS_level2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+ </html>

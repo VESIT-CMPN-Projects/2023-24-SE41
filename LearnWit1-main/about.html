@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LearnWit</title>
+    <link rel="icon" href="icon.ico" type="image/x-icon" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <style>
+      body {
+        background-color: #121212;
+        color: #fff;
+      }
+
+      .navbar {
+        background-color: #0748a9;
+      }
+
+      .navbar-brand {
+        color: #fff;
+      }
+
+      .navbar-toggler-icon {
+        filter: invert(1);
+      }
+
+      .nav-link {
+        color: #fff;
+      }
+
+      .nav-link:hover {
+        color: #09ebd5;
+      }
+
+      .container {
+        margin-top: 20px;
+      }
+
+      .featurette-heading {
+        color: #3875c9;
+      }
+
+      .card {
+        background-color: #18122a;
+        color: #fff;
+        margin-right: 10px;
+        width: 300px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+      }
+
+      .card-body {
+        padding: 1rem;
+      }
+
+      .card-title {
+        color: #3aeccc;
+      }
+
+      .card-text {
+        color: #f8ecec;
+      }
+
+      .card-img-top {
+        width: 100%;
+        height: 250px; /* Fixed height for images */
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .card-img-top:hover {
+        transform: scale(1.1);
+      }
+
+      .footer {
+        background-color: #000;
+        color: #fff;
+        padding: 20px 0;
+      }
+      .social-icons {
+        margin-top: 20px;
+      }
+      .social-icons a {
+        color: #fff;
+        text-decoration: none;
+        margin-right: 15px;
+        font-size: 24px;
+      }
+
+      .social-icons a:hover {
+        color: #09ebd5;
+      }
+
+      /* Scrollable container */
+      .scrollable-container {
+        max-height: 400px; /* Adjust as needed */
+        overflow-y: auto;
+      }
+
+      /* Team members section */
+      .team-members {
+        margin-top: 40px;
+        box-shadow: 4 4 20px rgba(245, 244, 244, 0.5) solid;
+      }
+
+      .team-member {
+        height: 100%; /* Ensure all team member cards have the same height */
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 30px;
+        cursor: pointer;
+        border :#fff 1px solid;
+      }
+
+      .team-member:hover {
+        box-shadow: 3px 3px 20px rgba(255, 255, 255, 0.5); /* Same shadow effect */
+      }
+      
+
+      .team-member img {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.3s ease;
+      }
+
+      .team-member:hover img {
+        transform: scale(1.1);
+      }
+
+      .team-member-details {
+        position: absolute;
+        bottom: -100%; /* Initially hidden */
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        transition: bottom 0.3s ease;
+      }
+
+      .team-member:hover .team-member-details {
+        bottom: 0; /* Show on hover */
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+      }
+
+      .team-member-details h4,
+      .team-member-details p {
+        margin-bottom: 5px;
+        color: #6ee8b7; /* Set text color to white */
+      }
+
+      /* Highlight team member names */
+      .team-member-details h4 {
+        color: #79d5f7; /* Light bluish */
+      }
+
+      .team-member-details p {
+        color: #e2e3f2; /* Purple-black shade */
+      }
+      .team-member-details .profession{
+        color: #3aeccc;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">LearnWit</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+      <h1 class="text-center mb-4">About Us</h1>
+      <div class="row mb-4">
+        <div class="col">
+          <div class="card">
+            <img
+              src="HR-GR8-technology.jpg"
+              class="card-img-top"
+              alt="...Image not found"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Who We Are</h5>
+              <p class="card-text">
+                Welcome to <span class="learnwit">LEARNWIT</span>, your go-to
+                destination for fun and challenging quizzes! We are passionate
+                about creating an engaging platform for users to test their
+                knowledge and learn new things.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="aim.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Our Mission</h5>
+              <p class="card-text">
+                At LEARNWIT, our mission is to provide a platform that inspires
+                curiosity and learning. We believe in making education enjoyable
+                by offering a wide range of quizzes on various topics, ensuring
+                that there's something for everyone.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="tos.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Our Team</h5>
+              <p class="card-text">
+                Our team is made up of passionate students who are dedicated to
+                creating the best quizzes possible. We work hard to ensure that
+                our quizzes are accurate, informative, and entertaining. We are
+                always looking for new ways to improve our quizzes and welcome
+                feedback from our users.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Content: Quizzes -->
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <!-- Add your quiz content here -->
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <!-- Add your quiz content here -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Members Section -->
+      <h2 class="text-center mb-4">Our Team Members</h2>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="team-member">
+            <img src="./assets/surya.png" alt="Team Member 3" />
+            <div class="team-member-details">
+              <h4>Suryanarayan Panigrahy</h4>
+              <p class="profession">Team Leader</p>
+              <p>
+                A proficient coder, actively engages in hackathons to drive innovation, leads the project
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="team-member">
+            <img src="./assets/harsh.png" alt="Team Member 1" />
+            <div class="team-member-details">
+              <h4>Harsh Patil</h4>
+              <p class="profession">Team Member</p>
+              <p>
+                A resourceful team member, adeptly manages social media handles to maximize outreach and engagement.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="team-member">
+            <img src="assets/hemant2.png" alt="Team Member 2" />
+            <div class="team-member-details">
+              <h4>Hemant Satam</h4>
+              <p class="profession">Team Member</p>
+              <p>
+                A creative member of the team, specializes in designing captivating websites and meticulous documentation.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="team-member">
+            <img src="./assets/gaurav.png" alt="Team Member 4" />
+            <div class="team-member-details">
+              <h4>Gaurav Gupta</h4>
+              <p class="profession">Team Member</p>
+              <p>
+                A dedicated team member, focuses on logic building to enhance website functionality.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer bg-dark text-white text-center py-3">
+      <div class="container">
+        <div class="social-icons mb-3">
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7171759640085573632?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A7171759640085573632%29"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/Surya17847/LearnWit1"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://www.instagram.com/?next=%2F&hl=en"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="https://www.facebook.com/profile.php?id=61556786798026&is_tour_dismissed=true"><i class="fab fa-facebook"></i> Facebook</a>
+        </div>
+        <p>&copy; 2024 LearnWit. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

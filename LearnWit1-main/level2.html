@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="level1.css" />
+    <title>Level2</title>
+    <link rel="icon" href="icon.ico" type="image/x-icon" />
+
+  </head>
+  <body>
+    <header>
+      <h1><img src="LOGO.jpg" alt=" logo" width="50px" height="40px" /></h1>
+    </header>
+    <div class="quiz-section">
+      <span id="timer"></span>
+      <div id="quiz">
+        <h1 class="question" id="question">Question</h1>
+        <ul>
+          <li>
+            <input type="radio" name="answer" class="answer" id="a" />
+            <label for="a" id="option1">option1</label>
+          </li>
+          <li>
+            <input type="radio" name="answer" class="answer" id="b" />
+            <label for="b" id="option2">option2</label>
+          </li>
+          <li>
+            <input type="radio" name="answer" class="answer" id="c" />
+            <label for="c" id="option3">option3</label>
+          </li>
+          <li>
+            <input type="radio" name="answer" class="answer" id="d" />
+            <label for="d" id="option4">option4</label>
+          </li>
+        </ul>
+        <!-- <hr> -->
+        <div class="button">
+          <button type="button" id="next">Next</button>
+          <button type="submit" id="submit">Submit</button>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="level_2.js"></script>
+  </body>
+</html>

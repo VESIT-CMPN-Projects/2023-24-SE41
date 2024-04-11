@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0e1946; /* Dark background color */
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 100px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    gap: 20px;
+    flex-direction: column;
+    border: 5px solid #053564; /* Dodger Blue */
+    border-radius: 1rem;
+    padding: 40px;
+    background-color: rgb(3, 20, 128);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow effect */
+    transition: transform 0.3s ease; /* Transition effect on hover */
+}
+.container:hover {
+    transform: scale(1.05); /* Scale the container on hover */
+    background-color: #050c39; /* Light gray background color */
+    transition: transform 0.3s ease;
+}
+.level-btn {
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #041849; /* Darker blue */
+    color: #1d0505;
+    border: none;
+    border-radius: 3rem;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.level-btn:hover {
+    background-color: #0ea6a9; /* Even darker blue on hover */
+    transform: scale(1.05);
+    box-shadow: 0 1px 2px rgba(255, 255, 255, 0.2), 0 0 0 2px #edeff3; /* White box shadow */
+}
+.easy {
+    background-color: #4cd137; /* Green for easy level */
+}
+.medium {
+    background-color: #fbc531; /* Yellow for medium level */
+}
+.hard {
+    background-color: #e84118; /* Red for hard level */
+}
+body {
+    background-image: url('./assets/blue.jpg'); /* Replace 'background.jpg' with the path to your image */
+    background-size: cover; /* This will make sure the background image covers the entire viewport */
+    background-repeat: no-repeat; /* This prevents the background image from repeating */
+}

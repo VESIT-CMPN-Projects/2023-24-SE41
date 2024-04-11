@@ -1,0 +1,17 @@
+{
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "../../../../Downloads/nodejs-tutorials-auth-api-jwt-mongo-project/nodejs-tutorials-auth-api-jwt-mongo-project"
+	},
+	{
+		"path": "../../../../Downloads/learnwit13-20240210T042440Z-001/learnwitfinall"
+	}
+],
+  "settings": {
+    "liveServer.settings.port": 5501,
+    "liveServer.settings.multiRootWorkspaceName": "LearnWit1"
+  }
+}

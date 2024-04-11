@@ -1,0 +1,33 @@
+{
+  "folders": [
+	{
+		"name": "WEB",
+		"path": "../../../../OneDrive/Desktop/WEB"
+	},
+	{
+		"name": "login-registration-template-main",
+		"path": "../../../login-registration-template-main/login-registration-template-main"
+	},
+	{
+		"name": "nodejs-tutorials-auth-api-jwt-mongo-project",
+		"path": ".."
+	},
+	{
+		"name": "LearnWit-main9",
+		"path": "../../../LearnWit-main9-20240203T132553Z-001/LearnWit-main9"
+	},
+	{
+		"name": "LearnWit-main8",
+		"path": "../../../LearnWit-main8-20240203T133531Z-001/LearnWit-main8"
+	},
+	{
+		"path": "../../../../OneDrive/Documents/LearnWit[2]/LearnWit-mainn"
+	},
+	{
+		"path": "../../../../OneDrive/Documents/LearnWit1_(2)[1]/LearnWit1"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "LearnWit1"
+  }
+}
